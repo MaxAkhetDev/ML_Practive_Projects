@@ -1,0 +1,137 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0f0f13;
+  color: #e8e8f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #7c6af7, #3ecfcf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .subtitle {
+  margin-top: 0.4rem;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.drop-zone {
+  border: 2px dashed #3ecfcf44;
+  border-radius: 16px;
+  padding: 4rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #1a1a24;
+}
+
+.drop-zone:hover, .drop-zone.drag-over {
+  border-color: #3ecfcf;
+  background: #1e2030;
+}
+
+.drop-inner .icon { font-size: 3rem; }
+.drop-inner p { margin-top: 1rem; color: #aaa; line-height: 1.6; }
+
+.browse-link {
+  color: #7c6af7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.status {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  background: #1a1a24;
+}
+
+.status.loading { color: #3ecfcf; }
+.status.error   { color: #f77; background: #2a1a1a; }
+.hidden         { display: none !important; }
+
+.result-section { margin-top: 2rem; }
+
+.images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.image-card {
+  background: #1a1a24;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.image-card h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888;
+  margin-bottom: 0.8rem;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.checkerboard {
+  background-image: linear-gradient(45deg, #555 25%, transparent 25%),
+    linear-gradient(-45deg, #555 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #555 75%),
+    linear-gradient(-45deg, transparent 75%, #555 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.btn-download, .btn-reset {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-download {
+  background: linear-gradient(135deg, #7c6af7, #3ecfcf);
+  color: white;
+  margin-right: 1rem;
+}
+
+.btn-reset {
+  background: #2a2a38;
+  color: #ccc;
+}
+
+.btn-download:hover, .btn-reset:hover { opacity: 0.85; }

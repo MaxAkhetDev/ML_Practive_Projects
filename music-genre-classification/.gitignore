@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+model/__pycache__/
+model/genre_model.h5
+model/features_30_sec.csv
